@@ -1,0 +1,49 @@
+goal [ 0 ] . pos . x = 0.0
+goal [ 0 ] . pos . y = -0.225
+goal [ 0 ] . pos . z = -72.55
+goal [ 0 ] . rot . x = 0.0
+goal [ 0 ] . rot . y = 0.0
+goal [ 0 ] . rot . z = 0.0
+goal [ 0 ] . type . x = B
+
+start [ 0 ] . pos . x = 0.0
+start [ 0 ] . pos . y = 1.0
+start [ 0 ] . pos . z = 21.51
+start [ 0 ] . rot . x = 0.0
+start [ 0 ] . rot . y = 0.0
+start [ 0 ] . rot . z = 0.0
+
+fallout [ 0 ] . pos . y = -1.5
+
+banana [ 0 ] . pos . x = 0.0
+banana [ 0 ] . pos . y = 0.175
+banana [ 0 ] . pos . z = -42.05
+banana [ 0 ] . type . x = B
+
+banana [ 1 ] . pos . x = 0.0
+banana [ 1 ] . pos . y = 0.975
+banana [ 1 ] . pos . z = -14.01
+banana [ 1 ] . type . x = N
+
+
+maxtime [ 0 ] . x . x = 60.0
+leadintime [ 0 ] . x . x = 6.0
+
+animobj [ 0 ] . file . x = anim-1.txt
+animobj [ 0 ] . name . x = tri1
+animobj [ 0 ] . center . x = 0.0
+animobj [ 0 ] . center . y = 0.0
+animobj [ 0 ] . center . z = 0.0
+
+animobj [ 1 ] . file . x = anim-2.txt
+animobj [ 1 ] . name . x = tri2
+animobj [ 1 ] . center . x = 0.0
+animobj [ 1 ] . center . y = 0.0
+animobj [ 1 ] . center . z = -28.02
+
+animobj [ 2 ] . file . x = anim-3.txt
+animobj [ 2 ] . name . x = tri3
+animobj [ 2 ] . center . x = 0.0
+animobj [ 2 ] . center . y = 0.0
+animobj [ 2 ] . center . z = -56.04
+

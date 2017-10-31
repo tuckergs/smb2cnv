@@ -767,7 +767,7 @@ void writeLz()
 			putc(0,temp);
 			putc(0,temp);
 			putc(0,temp);
-			putc(2,temp);
+			putc(animFrame[i][j].mt.rotx,temp);
 			int putMe = toInt(animFrame[i][j].time);
 			putc((putMe>>24)&0xFF,temp);
 			putc((putMe>>16)&0xFF,temp);
@@ -792,7 +792,7 @@ void writeLz()
 			putc(0,temp);
 			putc(0,temp);
 			putc(0,temp);
-			putc(2,temp);
+			putc(animFrame[i][j].mt.roty,temp);
 			int putMe = toInt(animFrame[i][j].time);
 			putc((putMe>>24)&0xFF,temp);
 			putc((putMe>>16)&0xFF,temp);
@@ -817,7 +817,7 @@ void writeLz()
 			putc(0,temp);
 			putc(0,temp);
 			putc(0,temp);
-			putc(2,temp);
+			putc(animFrame[i][j].mt.rotz,temp);
 			int putMe = toInt(animFrame[i][j].time);
 			putc((putMe>>24)&0xFF,temp);
 			putc((putMe>>16)&0xFF,temp);
@@ -842,7 +842,7 @@ void writeLz()
 			putc(0,temp);
 			putc(0,temp);
 			putc(0,temp);
-			putc(2,temp);
+			putc(animFrame[i][j].mt.posx,temp);
 			int putMe = toInt(animFrame[i][j].time);
 			putc((putMe>>24)&0xFF,temp);
 			putc((putMe>>16)&0xFF,temp);
@@ -867,7 +867,7 @@ void writeLz()
 			putc(0,temp);
 			putc(0,temp);
 			putc(0,temp);
-			putc(2,temp);
+			putc(animFrame[i][j].mt.posy,temp);
 			int putMe = toInt(animFrame[i][j].time);
 			putc((putMe>>24)&0xFF,temp);
 			putc((putMe>>16)&0xFF,temp);
@@ -892,7 +892,7 @@ void writeLz()
 			putc(0,temp);
 			putc(0,temp);
 			putc(0,temp);
-			putc(2,temp);
+			putc(animFrame[i][j].mt.posz,temp);
 			int putMe = toInt(animFrame[i][j].time);
 			putc((putMe>>24)&0xFF,temp);
 			putc((putMe>>16)&0xFF,temp);

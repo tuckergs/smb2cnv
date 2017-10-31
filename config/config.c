@@ -16,6 +16,22 @@ void parseConfig(char * configpath)
 	char param1[80];
 	char param2;
 	char value[80];
+
+	//Movement type defaults to linear
+	int i,j;
+	for(i=0;i<MAXANIMOBJS;++i)
+	{
+		for(j=0;j<MAXFRAMESPEROBJ;++j)
+		{
+			animFrame[i][j].mt.posx = 0x1;
+			animFrame[i][j].mt.posy = 0x1;
+			animFrame[i][j].mt.posz = 0x1;
+			animFrame[i][j].mt.rotx = 0x1;
+			animFrame[i][j].mt.roty = 0x1;
+			animFrame[i][j].mt.rotz = 0x1;
+		}
+	}
+
 	while(fgets(line,80,config)!=NULL)
 	{
 		sscanf(line," %s [ %i ] . %s . %c = %s ",ident,&index,param1,&param2,value);
@@ -165,6 +181,26 @@ void parseConfig(char * configpath)
 						if(param2b=='x') animFrame[index][indexb].rotx = valuef;
 						else if(param2b=='y') animFrame[index][indexb].roty = valuef;
 						else if(param2b=='z') animFrame[index][indexb].rotz = valuef;
+						if((indexb+1)>animFrameCount[index]) animFrameCount[index] = (indexb+1);
+					}
+					else if(strcmp(param1b,"mvmttypepos")==0)
+					{
+						unsigned char valuebyte = 0x1;
+						if(!strcmp(valueb,"E"))
+							valuebyte = 0x2;
+						if(param2b=='x') animFrame[index][indexb].mt.posx = valuebyte;
+						else if(param2b=='y') animFrame[index][indexb].mt.posy = valuebyte;
+						else if(param2b=='z') animFrame[index][indexb].mt.posz = valuebyte;
+						if((indexb+1)>animFrameCount[index]) animFrameCount[index] = (indexb+1);
+					}
+					else if(strcmp(param1b,"mvmttyperot")==0)
+					{
+						unsigned char valuebyte = 0x1;
+						if(!strcmp(valueb,"E"))
+							valuebyte = 0x2;
+						if(param2b=='x') animFrame[index][indexb].mt.rotx = valuebyte;
+						else if(param2b=='y') animFrame[index][indexb].mt.roty = valuebyte;
+						else if(param2b=='z') animFrame[index][indexb].mt.rotz = valuebyte;
 						if((indexb+1)>animFrameCount[index]) animFrameCount[index] = (indexb+1);
 					}
 					else if(strcmp(param1b,"time")==0)
